@@ -1,0 +1,17 @@
+<div class='chart-wrapper'>
+  <div class='chart-wrapper__top'>
+    <h3 class='chart-wrapper__title'>{{ title }}</h3>
+  </div>
+  <div class='chart-wrapper__content'>
+    <div [options]='chartOptions()' class='chart-wrapper__chart' echarts></div>
+    <div class='chart-wrapper__tip'>
+      <h4>
+        <span class='chart-wrapper__value'>Streamline your process</span><br />
+        <div style='margin-top: 10px'>by reporting directly to <br /> PCC through our system</div>
+      </h4>
+      <button (click)='buttonClick.emit()' [disabled]='!chartParams().readyToReport && !chartParams().reported'
+              class='chart-wrapper__btn'>{{ buttonText }}
+      </button>
+    </div>
+  </div>
+</div>

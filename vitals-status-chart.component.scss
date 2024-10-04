@@ -1,0 +1,100 @@
+:host {
+  .chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+
+    &__title {
+      font-size: 16px;
+      line-height: 19.2px;
+      color: #252A36;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__value {
+      color: #252A36;
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 30px;
+      padding-bottom: 10px;
+    }
+
+    &__text {
+      color: #A2AFC3;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14.4px;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      --_gap: 34px;
+      align-items: center;
+      column-gap: var(--_gap);
+      height: 100%;
+    }
+
+    &__chart {
+      height: auto;
+      width: 65%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-30%);
+
+      @media (max-width: 1024px) and (orientation: portrait), (max-width: 1280px) and (orientation: landscape) {
+        left: -9%;
+      }
+    }
+
+    &__tip {
+      width: 224px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      margin-right: 20px;
+
+      h4 {
+        color: #252A36;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 70px;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+      border: 1px solid #263558;
+      cursor: pointer;
+      padding: 4px 16px;
+      background: transparent;
+      transition: all .4s;
+
+      &:hover {
+        color: #fff;
+        background: #263558;
+      }
+
+      &[disabled] {
+        pointer-events: none;
+        border-color: #A4AEC1;
+        color: #A4AEC1;
+        background-color: transparent;
+      }
+    }
+  }
+}
